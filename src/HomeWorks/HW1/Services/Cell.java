@@ -9,24 +9,45 @@ public class Cell {
     private int position;
     private int size;
 
+    /**
+     * @param position int the holder
+     * @param size     of the any cell
+     */
     public Cell(int position, int size) {
         this.cell = new Stack<>();
         this.position = position;
         this.size = size;
     }
 
+    /**
+     * Add any product in the cell
+     *
+     * @param product to added
+     * @return true if is done and false if not
+     */
     public boolean add(Product product) {
         this.cell.push(product);
         this.size++;
         return true;
     }
-     public Product give() {
+
+    /**
+     * give the product
+     *
+     * @return choises product
+     */
+    public Product give() {
         if (this.cell.isEmpty()) return null;
         this.size--;
         return this.cell.pop();
-     }
+    }
 
-    public String getInfo(){
+    /**
+     * Get info about product
+     *
+     * @return info
+     */
+    public String getInfo() {
         return cell.peek().toString();
     }
 
@@ -42,6 +63,11 @@ public class Cell {
         return position;
     }
 
+    /**
+     * Has int the current cell empty slot to the new product
+     *
+     * @return
+     */
     public boolean hasEmptySlot() {
         return cell.size() < this.size;
     }

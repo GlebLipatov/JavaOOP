@@ -31,8 +31,8 @@ public class Product {
 
         return
                 this.brand.equals(product.brand) &&
-                this.name.equals(product.name) &&
-                this.price.equals(product.price);
+                        this.name.equals(product.name) &&
+                        this.price.equals(product.price);
     }
 
     @Override
