@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class App {
 
-    public static <List> void main(String[] args) {
+    public static  void main(String[] args) {
 
         TeacherController teacherController = new TeacherController();
         StudentController studentController = new StudentController();
